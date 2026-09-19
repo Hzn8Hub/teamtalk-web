@@ -1,22 +1,9 @@
-<div align="center">
-
-<img src="docs/brand/vortex-tile.svg" width="120" alt="GoWind Admin｜风行" />
 
 # GoWind Admin｜风行
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Go Version](https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go)](https://go.dev/)
-[![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vuedotjs)](https://vuejs.org/)
-[![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react)](https://react.dev/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com/)
-
-[English](./README.en-US.md) | **中文** | [日本語](./README.ja-JP.md)
-
-</div>
-
 ---
 
-## 项目亮点
+## 1. 项目亮点
 
 - **多前端适配**：同时提供 `Vue3 Vben`（Ant Design Vue）、`Vue3 Element Plus`、`React19 Antd` 三套前端，满足不同团队偏好
 - **企业级 RBAC**：支持多租户、多角色、多部门、菜单/按钮/数据级权限控制（Casbin / OPA / Zanzibar）
@@ -27,7 +14,7 @@
 
 ---
 
-## 演示地址
+## 2. 演示地址
 
 | 前端版本 | 演示地址 |
 |---------|--------|
@@ -40,7 +27,7 @@
 
 ---
 
-## 技术栈
+## 3. 技术栈
 
 <table>
 <tr><th>层级</th><th>技术</th></tr>
@@ -58,7 +45,7 @@
 
 ---
 
-## 安全与等保合规
+## 4. 安全与等保合规
 
 本项目的安全能力参照《网络安全等级保护 2.0》（二级/三级）技术要求设计，面向企业高隐私私有化部署场景开箱即用：
 
@@ -76,7 +63,7 @@
 
 ---
 
-## 快速开始
+## 5. 快速开始
 
 ### 环境要求
 
@@ -164,9 +151,8 @@ cd frontend/admin/vue-vben && pnpm dev:antd
 
 ---
 
-## 功能列表
+## 6. 功能列表
 
-> 各列表页（业务数据与审计日志）均支持按当前筛选条件分页聚合导出，格式可选 CSV / XLSX（上限 1 万行）。
 
 ### 组织与权限
 
@@ -223,7 +209,7 @@ cd frontend/admin/vue-vben && pnpm dev:antd
 
 ---
 
-## 项目结构
+## 7. 项目结构
 
 ```
 go-wind-admin/
@@ -249,92 +235,8 @@ go-wind-admin/
 └── docs/                           # 项目文档
 ```
 
----
 
-## 截图展示
-
-<table>
-    <tr>
-        <td><img src="./docs/images/admin_login_page.png" alt="后台用户登录界面"/></td>
-        <td><img src="./docs/images/admin_dashboard.png" alt="后台分析界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_user_list.png" alt="后台用户列表界面"/></td>
-        <td><img src="./docs/images/admin_user_create.png" alt="后台创建用户界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_tenant_list.png" alt="后台租户列表界面"/></td>
-        <td><img src="./docs/images/admin_tenant_create.png" alt="后台创建租户界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_org_unit_list.png" alt="组织单位列表界面"/></td>
-        <td><img src="./docs/images/admin_org_unit_create.png" alt="创建组织单位界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_position_list.png" alt="后台职位列表界面"/></td>
-        <td><img src="./docs/images/admin_position_create.png" alt="后台创建职位界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_role_list.png" alt="后台角色列表界面"/></td>
-        <td><img src="./docs/images/admin_role_create.png" alt="后台创建角色界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_permission_list.png" alt="后台权限列表界面"/></td>
-        <td><img src="./docs/images/admin_permission_create.png" alt="后台创建权限界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_menu_list.png" alt="后台目录列表界面"/></td>
-        <td><img src="./docs/images/admin_menu_create.png" alt="后台创建目录界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_task_list.png" alt="后台调度任务列表界面"/></td>
-        <td><img src="./docs/images/admin_task_create.png" alt="后台创建调度任务界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_dict_list.png" alt="后台数据字典列表界面"/></td>
-        <td><img src="./docs/images/admin_dict_entry_create.png" alt="后台创建数据字典条目界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_internal_message_list.png" alt="后台站内信消息列表界面"/></td>
-        <td><img src="./docs/images/admin_internal_message_publish.png" alt="后台发布站内信消息界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_login_policy_list.png" alt="登录策略列表界面"/></td>
-        <td><img src="./docs/images/admin_login_policy_create.png" alt="登录策略创建界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_login_audit_log_list.png" alt="后台登录日志界面"/></td>
-        <td><img src="./docs/images/admin_api_audit_log_list.png" alt="后台操作日志界面"/></td>
-    </tr>
-    <tr>
-        <td><img src="./docs/images/admin_api_list.png" alt="API列表界面"/></td>
-        <td><img src="./docs/images/api_swagger_ui.png" alt="后端内置Swagger UI界面"/></td>
-    </tr>
-</table>
-
-## 配套工具
+## 8. 配套工具
 
 - **[go-wind-toolkit / gowind-uiapp](https://github.com/tx7do/go-wind-toolkit/tree/main/gowind-uiapp)** —— 跨平台桌面端代码生成器（Go + Wails）：一键导入 SQL 或直连数据库表（MySQL / PostgreSQL / SQLite / SQL Server / Oracle），自动生成服务端与前端代码，支持 gRPC / RESTful 等多种模板与简单表单生成；另提供非交互、JSON 输出的 CLI（`gowind-cli`），便于脚本与 AI Agent 调用。
 - **[gow —— GoWind CLI](https://github.com/tx7do/go-wind-toolkit/tree/main/gowind)** —— 本项目的推荐命令行入口：`gow run admin` 运行服务，`gow ent` / `gow api` 代码生成，`gow generate` 从数据库 DSN 生成 CRUD 微服务，`gow extract` 微服务模块拆分演进。在 `backend/` 下执行，自动发现 `app/*/service`，日常开发优先于 Makefile 使用。
-
-## 社区与贡献
-
-欢迎参与 GoWind Admin 的建设。以下文档说明如何贡献代码、报告问题与反馈安全漏洞：
-
-- [贡献指南](./CONTRIBUTING.md) —— 开发环境、代码生成约定、提交规范与 PR 流程
-- [行为准则](./.github/CODE_OF_CONDUCT.md) —— 社区互动预期
-- [安全策略](./SECURITY.md) —— 漏洞上报流程与覆盖范围
-- [更新日志](./CHANGELOG.md) —— 版本变更记录
-- Issue 模板：[Bug 报告](./.github/ISSUE_TEMPLATE/bug_report.md) · [功能请求](./.github/ISSUE_TEMPLATE/feature_request.md)
-- [PR 模板](./.github/PULL_REQUEST_TEMPLATE.md)
-
-## 联系我们
-
-- 微信个人号：`yang_lin_bo`（备注：`go-wind-admin`）
-- 掘金专栏：[go-wind-admin](https://juejin.cn/column/7541283508041826367)
-
-## 致谢
-
-[![JetBrains](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://jb.gg/OpenSource)
-
-感谢 JetBrains 提供免费的 GoLand & WebStorm 开源授权。
