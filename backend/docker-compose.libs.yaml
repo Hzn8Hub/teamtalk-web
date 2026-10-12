@@ -66,7 +66,8 @@ services:
 #      - ${APP_ROOT:-/root/app}/redis/data:/bitnami/redis/data
 
   minio:
-    image: docker.io/minio/minio:latest
+    # image: docker.io/minio/minio:latest
+    image: docker.io/pgsty/silo:RELEASE.2026-09-16T00-00-00Z
     restart: always
     ports:
       - "9000:9000"
