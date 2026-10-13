@@ -2705,10 +2705,7 @@ paths:
         post:
             tags:
                 - MfaService
-            description: |-
-                禁用/移除已注册 MFA 凭证。
-                 注意：kratos http 生成器不支持 DELETE 请求体（handler 只 BindQuery），
-                 而 TS 生成器默认把 message 序列化为 body——为两端一致改用 POST + body。
+            description: "禁用/移除已注册 MFA 凭证。\r\n 注意：kratos http 生成器不支持 DELETE 请求体（handler 只 BindQuery），\r\n 而 TS 生成器默认把 message 序列化为 body——为两端一致改用 POST + body。"
             operationId: MfaService_DisableMFA
             requestBody:
                 content:
@@ -2799,9 +2796,7 @@ paths:
         post:
             tags:
                 - MfaService
-            description: |-
-                验证登录 MFA 挑战。通过则返回 LoginResponse（含真 access_token）。
-                 免鉴权：登录流程在密码校验通过、待二次验证阶段调用。
+            description: "验证登录 MFA 挑战。通过则返回 LoginResponse（含真 access_token）。\r\n 免鉴权：登录流程在密码校验通过、待二次验证阶段调用。"
             operationId: MfaService_VerifyMFAChallenge
             requestBody:
                 content:
@@ -2822,10 +2817,7 @@ paths:
         delete:
             tags:
                 - MfaService
-            description: |-
-                撤销指定 MFA 凭证（按 id）。
-                 ⚠️ 当前无前端调用方：DELETE 请求体在 Go 生成器（恒 BindQuery）与 TS 生成器
-                 （发 body）之间不一致，贸然对接会静默丢参——需要时应改 POST（参见 DisableMFA）。
+            description: "撤销指定 MFA 凭证（按 id）。\r\n ⚠️ 当前无前端调用方：DELETE 请求体在 Go 生成器（恒 BindQuery）与 TS 生成器\r\n （发 body）之间不一致，贸然对接会静默丢参——需要时应改 POST（参见 DisableMFA）。"
             operationId: MfaService_RevokeMFADevice
             parameters:
                 - name: credentialId
@@ -10995,11 +10987,7 @@ tags:
     - name: MenuService
       description: 后台菜单管理服务
     - name: MfaService
-      description: |-
-        MFA（多因素认证）服务 HTTP 桥接。
-         管理侧 RPC（GetMFAStatus/ListEnrolledMethods/StartEnrollMethod/ConfirmEnrollMethod/
-         DisableMFA/RevokeMFADevice）需登录态，走正常 auth+authz 中间件，不加 security:{}。
-         登录挑战侧 RPC（VerifyMFAChallenge）免鉴权，加 security:{} 并加入 rest_server 白名单。
+      description: "MFA（多因素认证）服务 HTTP 桥接。\r\n 管理侧 RPC（GetMFAStatus/ListEnrolledMethods/StartEnrollMethod/ConfirmEnrollMethod/\r\n DisableMFA/RevokeMFADevice）需登录态，走正常 auth+authz 中间件，不加 security:{}。\r\n 登录挑战侧 RPC（VerifyMFAChallenge）免鉴权，加 security:{} 并加入 rest_server 白名单。"
     - name: NotificationChannelService
       description: 通知渠道管理服务（平台级配置）
     - name: OnlineSessionService
