@@ -232,10 +232,10 @@ kratos-swagger-ui
 
 方案2：
 由于这些仓库耦合度很高（同属于 go-wind-admin 生态）
-更建议：
-1. 把 11 个仓库合并成一个私有 monorepo（比如叫 go-wind-core）
-2. 内部用 相对路径 replace
-3. 这样既能保证所有模块版本一致，又能避免外部依赖断裂
+将仓库合并到两个子仓库：
+把多个仓库合并成私有的 monorepo，这样既能保证所有模块版本一致，又能避免外部依赖断裂
+仓库1：teamtalk-go-base：包含go-crud、go-scripts、go-utils、go-wind、go-wind-plugins
+仓库2：teamtalk-go-kratos：包含kratos框架相关的代码
 
 分层依赖：
 wind/                   ← 最上层，可依赖所有
@@ -247,7 +247,7 @@ pkg/crud, authn, authz, transport  ← 能力层，依赖 utils, scripts
 pkg/utils, pkg/scripts  ← 基础层，零内部依赖
 
 ┌─────────────────────────────┐
-│        kratos 仓库           │
+│        teamtalk-kratos 仓库  │
 │  kratos-bootstrap           │
 │  kratos-transport           │
 │  kratos-authn / kratos-authz│
@@ -256,7 +256,7 @@ pkg/utils, pkg/scripts  ← 基础层，零内部依赖
            │ 只依赖 go-utils
            ▼
 ┌─────────────────────────────┐
-│        go-wind 仓库          │
+│        teamtalk-go-base 仓库 │
 │  go-utils  ◄── 最底层        │
 │  go-crud                    │
 │  go-scripts                 │
